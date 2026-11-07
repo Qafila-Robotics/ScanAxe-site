@@ -13,8 +13,9 @@ const year = new Date().getFullYear()
         <img :src="logoUrl" alt="ScanAxe" class="h-8 w-auto">
         <p class="mt-3 max-w-sm">{{ t('footer.tagline') }}</p>
       </div>
-      <nav v-if="config.public.contactEmail" class="flex flex-wrap gap-6">
-        <a :href="`mailto:${config.public.contactEmail}`" class="hover:text-white">{{ t('footer.contact') }}</a>
+      <nav class="flex flex-wrap gap-6">
+        <NuxtLinkLocale to="/llm" class="hover:text-white">{{ t('footer.facts') }}</NuxtLinkLocale>
+        <a v-if="config.public.contactEmail" :href="`mailto:${config.public.contactEmail}`" class="hover:text-white">{{ t('footer.contact') }}</a>
       </nav>
     </div>
     <p class="mx-auto mt-8 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs md:px-8">{{ t('footer.rights', { year }) }}</p>
