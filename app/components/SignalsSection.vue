@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const signals = [
-  { key: 'velocity', icon: 'pulse' },
-  { key: 'function', icon: 'spark' },
-  { key: 'hard', icon: 'hourglass' },
-  { key: 'expansion', icon: 'globe' },
-  { key: 'leadership', icon: 'star' },
-  { key: 'specialism', icon: 'target' },
+  { key: 'engagement', icon: 'pulse' },
+  { key: 'topics', icon: 'spark' },
+  { key: 'jobChange', icon: 'swap' },
+  { key: 'funding', icon: 'star' },
+  { key: 'hiring', icon: 'tabs' },
+  { key: 'lookalike', icon: 'target' },
 ] as const
 </script>
 
