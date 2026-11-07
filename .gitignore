@@ -1,10 +1,30 @@
+
+!.env.example
+# Local env files
+# Logs
+# Misc
+# Node dependencies
+# Nuxt dev/build outputs
+*.log
 .DS_Store
+.cache
+.cache/
+.data
+.data/
 .env
 .env.*
-!.env.example
-node_modules/
+.fleet
+.idea
 .idea/
-.vscode/
+.nitro
+.nitro/
+.nuxt
 .nuxt/
+.output
 .output/
+.vscode/
+dist
 dist/
+logs
+node_modules
+node_modules/

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "brand": {
+      "navy": { "$value": "#112245", "$description": "Logo ink. Headings, dark surfaces." },
+      "blue": { "$value": "#1A82F7", "$description": "Logo accent. Large text (≥ 24px or ≥ 18.66px bold), icons, graphics only: 3.76:1 on white." },
+      "action": { "$value": "#1469DC", "$description": "Buttons, links, small text on white (≥ 4.5:1)." },
+      "action-hover": { "$value": "#0F57B8" }
+    },
+    "neutral": {
+      "0": { "$value": "#FFFFFF" },
+      "50": { "$value": "#F6F8FB" },
+      "100": { "$value": "#EDF1F7" },
+      "200": { "$value": "#D9E0EA" },
+      "300": { "$value": "#B8C3D3" },
+      "500": { "$value": "#6B7A90" },
+      "700": { "$value": "#3B4A63" },
+      "900": { "$value": "#0B1630" }
+    },
+    "semantic": {
+      "success": { "$value": "#127A4B" },
+      "warning": { "$value": "#9A5B00" },
+      "danger": { "$value": "#B42318" },
+      "info": { "$value": "#1469DC" }
+    },
+    "text": {
+      "primary": { "$value": "{color.brand.navy}" },
+      "secondary": { "$value": "{color.neutral.700}" },
+      "muted": { "$value": "#56657C", "$description": "Meets 4.5:1 on neutral.50." },
+      "on-action": { "$value": "#FFFFFF" }
+    },
+    "surface": {
+      "page": { "$value": "{color.neutral.50}" },
+      "card": { "$value": "{color.neutral.0}" },
+      "border": { "$value": "{color.neutral.200}" },
+      "inverse": { "$value": "{color.brand.navy}" }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": { "$value": "'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif" },
+      "arabic": { "$value": "'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif" },
+      "mono": { "$value": "'IBM Plex Mono', ui-monospace, monospace" }
+    },
+    "size": {
+      "xs": { "$value": "0.75rem" }, "sm": { "$value": "0.875rem" }, "md": { "$value": "1rem" },
+      "lg": { "$value": "1.125rem" }, "xl": { "$value": "1.5rem" }, "2xl": { "$value": "2rem" }, "3xl": { "$value": "2.75rem" }
+    },
+    "weight": { "regular": { "$value": 400 }, "medium": { "$value": 500 }, "semibold": { "$value": 600 }, "bold": { "$value": 700 } },
+    "line-height": { "tight": { "$value": 1.2 }, "normal": { "$value": 1.5 }, "arabic": { "$value": 1.7 } }
+  },
+  "space": {
+    "1": { "$value": "4px" }, "2": { "$value": "8px" }, "3": { "$value": "12px" }, "4": { "$value": "16px" },
+    "6": { "$value": "24px" }, "8": { "$value": "32px" }, "12": { "$value": "48px" }, "16": { "$value": "64px" }
+  },
+  "radius": { "sm": { "$value": "6px" }, "md": { "$value": "10px" }, "lg": { "$value": "16px" }, "full": { "$value": "9999px" } },
+  "shadow": { "card": { "$value": "0 1px 2px rgba(17,34,69,.06), 0 4px 12px rgba(17,34,69,.06)" } }
+}
