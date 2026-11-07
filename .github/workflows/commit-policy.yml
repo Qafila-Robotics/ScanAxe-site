@@ -1,0 +1,17 @@
+name: commit-policy
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check commit messages and PR title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: sh scripts/check-commit-policy.sh "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" "$PR_TITLE"
