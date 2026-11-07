@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "ScanAxe: your AI sales agent for B2B",
-    "description": "Enter your website. ScanAxe learns your business, watches buying signals, scores every lead, writes a personal message for each one and runs your outreach on autopilot or with your approval."
+    "description": "Enter your website. ScanAxe learns your business, watches buying signals, scores every lead, writes a personal message for each one and runs your outreach on autopilot or with your approval.",
+    "imageAlt": "ScanAxe logo on a navy background with blue signal rings"
   },
   "nav": {
     "switch": "العربية",
@@ -264,6 +265,69 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "contact": "Contact",
-    "rights": "© {year} ScanAxe. Example data on this page is fictional."
+    "rights": "© {year} ScanAxe. Example data on this page is fictional.",
+    "facts": "Product facts"
+  },
+  "llm": {
+    "meta": {
+      "title": "ScanAxe product facts",
+      "description": "A plain description of ScanAxe, an AI sales agent for B2B companies: what it does, who it is for, how it works, its safety rules and its current status."
+    },
+    "title": "ScanAxe: product facts",
+    "lead": "A plain, factual description of ScanAxe for people, search engines and AI assistants. For the full presentation, see the home page.",
+    "back": "Back to the home page",
+    "sections": {
+      "what": {
+        "title": "What ScanAxe is",
+        "body": "ScanAxe is an AI sales agent for B2B companies. Your AI sales agent finds the people ready to buy, and reaches out for you. Enter your website. The agent learns your business, builds your ideal customer profile and watches for buying signals: who is engaging with your topics and competitors, who just changed jobs, which companies just raised money or are hiring. It scores every lead, writes a personal message for each one, and runs your LinkedIn and email outreach on autopilot, or waits for your approval. You get conversations and meetings, not lists."
+      },
+      "who": {
+        "title": "Who it is for",
+        "body": "Anyone selling to other businesses, in any industry and country: founders, sales teams and SDRs, agencies and consultancies, SaaS companies, professional and IT services firms, and manufacturers and distributors. It is a sales tool, not a recruitment tool."
+      },
+      "how": {
+        "title": "How it works",
+        "items": [
+          "The agent reads your website and proposes your ideal customer profile: industries, company size, regions and roles. You adjust it.",
+          "It watches the buying signals you choose for people and companies that match the profile.",
+          "Each lead gets a score with plain reasons and the evidence behind it, plus a message written for that person and that reason.",
+          "Outreach runs on LinkedIn and email, in one of two modes per agent: Autopilot or Copilot."
+        ]
+      },
+      "signals": {
+        "title": "Buying signals",
+        "items": [
+          "Engagement with your company page and your team's posts, through your own connected account",
+          "Engagement with posts about chosen topics, pain points or competitors",
+          "Job changes of decision-makers",
+          "Company funding announcements",
+          "Company hiring activity",
+          "Lookalikes of your best customers"
+        ]
+      },
+      "modes": {
+        "title": "Autopilot and Copilot",
+        "body": "In Autopilot, messages are sent automatically within rules the workspace has approved. In Copilot, every message waits for a person to approve it. The text that is approved is exactly the text that is sent."
+      },
+      "safety": {
+        "title": "Safety rules",
+        "items": [
+          "Warm leads, not cold lists: people showing real buying signals right now.",
+          "Personal at scale: every message written for the person and the reason they appeared.",
+          "Safe by design: sensible sending limits, no duplicates, and nothing sent after someone replies.",
+          "Two teammates do not contact the same person: leads are claimed across the workspace.",
+          "Sending follows the rules of the recipient's country; when the country is unknown, the strictest rules apply.",
+          "Only your own LinkedIn and email accounts are used, never shared, fake or rented accounts."
+        ]
+      },
+      "languages": {
+        "title": "Languages",
+        "body": "The interface is in English and Arabic, including right-to-left layouts. Messages can be written in the language of the recipient."
+      },
+      "status": {
+        "title": "Status and pricing",
+        "body": "ScanAxe is not yet generally available. Access opens through a waitlist, starting with a small group of design partners. Pricing is per seat and will be announced at launch."
+      }
+    }
   }
 }

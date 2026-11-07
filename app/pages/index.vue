@@ -1,3 +1,7 @@
+<script setup lang="ts">
+usePageSeo('meta')
+</script>
+
 <template>
   <div>
     <SiteHeader />

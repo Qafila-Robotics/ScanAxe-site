@@ -13,22 +13,22 @@ const links = ['problem', 'how', 'signals', 'review', 'safety', 'faq'] as const
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 md:px-8">
       <NuxtLinkLocale to="/" class="shrink-0"><img :src="logoUrl" alt="ScanAxe" class="h-9 w-auto"></NuxtLinkLocale>
       <nav class="hidden items-center gap-7 text-sm font-medium text-ink-soft lg:flex" :aria-label="t('nav.menu')">
-        <a v-for="link in links" :key="link" :href="`#${link}`" class="hover:text-action">{{ t(`nav.${link}`) }}</a>
+        <NuxtLinkLocale v-for="link in links" :key="link" :to="{ path: '/', hash: `#${link}` }" class="hover:text-action">{{ t(`nav.${link}`) }}</NuxtLinkLocale>
       </nav>
       <div class="flex items-center gap-3">
         <NuxtLink :to="switchPath(otherLocale)" :hreflang="otherLocale" class="rounded-full border border-line px-4 py-2 text-sm text-navy hover:border-action">
           {{ t('nav.switch') }}
         </NuxtLink>
-        <a href="#waitlist" class="hidden items-center gap-2 rounded-full bg-action px-5 py-2 text-sm font-semibold text-white hover:bg-action-hover sm:inline-flex">
+        <NuxtLinkLocale :to="{ path: '/', hash: '#waitlist' }" class="hidden items-center gap-2 rounded-full bg-action px-5 py-2 text-sm font-semibold text-white hover:bg-action-hover sm:inline-flex">
           {{ t('nav.cta') }} <UiIcon name="arrow" flip />
-        </a>
+        </NuxtLinkLocale>
         <button type="button" class="rounded-md p-2 text-navy lg:hidden" :aria-expanded="open" :aria-label="t('nav.menu')" @click="open = !open">
           <UiIcon name="menu" />
         </button>
       </div>
     </div>
     <nav v-if="open" class="border-t border-line bg-white px-4 py-3 lg:hidden" :aria-label="t('nav.menu')">
-      <a v-for="link in links" :key="link" :href="`#${link}`" class="block py-2 text-navy" @click="open = false">{{ t(`nav.${link}`) }}</a>
+      <NuxtLinkLocale v-for="link in links" :key="link" :to="{ path: '/', hash: `#${link}` }" class="block py-2 text-navy" @click="open = false">{{ t(`nav.${link}`) }}</NuxtLinkLocale>
     </nav>
   </header>
 </template>
