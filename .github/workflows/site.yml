@@ -22,6 +22,10 @@ jobs:
       # Project Pages URL until the custom domain is set (OPS-01); then set the repo variable SITE_BASE_URL to '/'.
       NUXT_APP_BASE_URL: ${{ vars.SITE_BASE_URL || '/ScanAxe-site/' }}
       NUXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://qafila-robotics.github.io/ScanAxe-site' }}
+      # F-011: the API's waitlist endpoint (e.g. https://api.example.com/api/v1/waitlist). While the repo
+      # variable is unset the form shows the "opens soon" note (or the contact email) instead.
+      NUXT_PUBLIC_WAITLIST_URL: ${{ vars.WAITLIST_URL || '' }}
+      NUXT_PUBLIC_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
