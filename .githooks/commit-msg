@@ -1,0 +1,46 @@
+#!/bin/sh
+# Batta commit-msg hook — reject AI/assistant mentions and Co-Authored-By trailers.
+# Always-rules: commits never mention Claude/AI/any assistant, never add a
+# Co-Authored-By trailer or a "Generated with" line. Install: see hooks/README.md.
+#
+# Self-test (the cases this hook must pass/fail):
+#   PASS (exit 0): "F-012: add cancellation endpoint"
+#   PASS (exit 0): "Fix race in payment callback"
+#   FAIL (exit 1): "F-012: add endpoint\n\nCo-Authored-By: X <x@y.z>"
+#   FAIL (exit 1): "Generated with Claude Code"
+#   FAIL (exit 1): "co-author: chatgpt"        (case-insensitive)
+#   FAIL (exit 1): any of: claude chatgpt gpt copilot "ai assistant" "generated with"
+# Run the self-test:  sh hooks/commit-msg --self-test
+
+run_check() {
+    # $1 = path to a file containing the commit message. Echo reason, return 1 on hit.
+    msg=$(grep -v '^#' "$1")   # ignore comment lines Git adds to the template
+
+    if printf '%s\n' "$msg" | grep -qiE '^[[:space:]]*co-authored-by:'; then
+        echo "commit-msg: Co-Authored-By trailers are not allowed." >&2
+        return 1
+    fi
+    if printf '%s\n' "$msg" | grep -qiE 'claude|chatgpt|copilot|(^|[^a-z])gpt([^a-z]|$)|generated with|ai[ -]assistant|co-?author(ed)?:?[[:space:]]*(by)?[[:space:]]*(chatgpt|gpt|claude|copilot)'; then
+        echo "commit-msg: remove AI/assistant mentions from the commit message." >&2
+        return 1
+    fi
+    return 0
+}
+
+if [ "$1" = "--self-test" ]; then
+    tmp=$(mktemp)
+    fails=0
+    check_expect() { printf '%b' "$1" > "$tmp"; run_check "$tmp" >/dev/null 2>&1; got=$?; [ "$got" = "$2" ] || { echo "FAIL expect=$2 got=$got for: $1"; fails=1; }; }
+    check_expect "F-012: add cancellation endpoint" 0
+    check_expect "Fix race in payment callback" 0
+    check_expect "F-012: add endpoint\n\nCo-Authored-By: X <x@y.z>" 1
+    check_expect "Generated with Claude Code" 1
+    check_expect "co-author: chatgpt" 1
+    check_expect "used copilot here" 1
+    rm -f "$tmp"
+    [ "$fails" = 0 ] && echo "self-test OK" || exit 1
+    exit 0
+fi
+
+run_check "$1" || exit 1
+exit 0
