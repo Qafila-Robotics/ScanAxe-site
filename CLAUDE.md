@@ -12,7 +12,7 @@ to the ScanAxe API. Product plan, decisions and issues live in `Qafila-Robotics/
 - Batta Brain (local machine only): `20-Skills/web-nuxt/SKILL.md`.
 
 ## Commands
-- Install: `npm ci` · Dev: `npm run dev` · Checks: `npm run lint && npm run typecheck`
+- Install: `npm ci` · Dev: `npm run dev` · Checks: `npm run tokens:check && npm run lint && npm run typecheck`
 - Build: `npm run generate` (output `.output/public`, what Pages serves)
 
 ## Rules
