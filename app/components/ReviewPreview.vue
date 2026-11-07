@@ -7,9 +7,9 @@ const reasons = [
   { pts: 24, key: 'reason3' },
 ] as const
 const evidence = [
-  { tag: 'HARD-TO-FILL', key: 'reason1' },
-  { tag: 'VELOCITY', key: 'reason2' },
-  { tag: 'LEADERSHIP', key: 'reason3' },
+  { tag: 'ENGAGEMENT', key: 'reason1' },
+  { tag: 'JOB CHANGE', key: 'reason2' },
+  { tag: 'HIRING', key: 'reason3' },
 ] as const
 </script>
 
