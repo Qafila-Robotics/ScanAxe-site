@@ -1,12 +1,269 @@
 {
   "meta": {
     "title": "ScanAxe: reach companies the moment they start hiring",
-    "description": "ScanAxe finds companies showing hiring intent, explains why they fit, and drafts outreach that a person approves before anything is sent."
+    "description": "ScanAxe finds companies showing hiring intent, explains why they fit your firm, and drafts outreach that a person approves before anything is sent."
   },
-  "nav": { "switch": "العربية" },
-  "home": {
+  "nav": {
+    "switch": "العربية",
+    "menu": "Menu",
+    "problem": "Why ScanAxe",
+    "how": "How it works",
+    "signals": "Hiring signals",
+    "review": "Review queue",
+    "safety": "Safety",
+    "faq": "FAQ",
+    "cta": "Join the waitlist"
+  },
+  "hero": {
+    "badge": "For recruitment & staffing firms · Human-approved outreach",
     "title": "Reach companies the moment they start hiring.",
-    "lead": "Hiring signals, explained leads and human-approved outreach for recruitment, staffing and B2B services firms.",
-    "soon": "Launching soon. The waitlist opens shortly."
+    "lead": "ScanAxe watches hiring signals across your niche, explains why each company fits your desk, and drafts outreach that your consultants approve before a single message is sent.",
+    "points": {
+      "approval": "Every message approved by a person",
+      "dedupe": "No double-pitching across your desks",
+      "rules": "Country-aware outreach rules"
+    }
+  },
+  "form": {
+    "email": "Work email",
+    "emailPlaceholder": "you{'@'}agency.com",
+    "company": "Agency name",
+    "country": "Country",
+    "countryPlaceholder": "Select country",
+    "submit": "Join the waitlist",
+    "submitting": "Joining…",
+    "consent": "We'll only email you about ScanAxe access. See our privacy notice.",
+    "success": "You're on the list. We'll be in touch before launch.",
+    "invalid": "Please enter a valid work email.",
+    "rateLimited": "Too many attempts. Please try again in a minute.",
+    "error": "Something went wrong. Please try again.",
+    "fallback": "The waitlist opens soon. Meanwhile, email us at {email}.",
+    "countries": {
+      "GB": "United Kingdom",
+      "IE": "Ireland",
+      "DE": "Germany",
+      "NL": "Netherlands",
+      "FR": "France",
+      "US": "United States",
+      "AE": "United Arab Emirates",
+      "SA": "Saudi Arabia",
+      "QA": "Qatar",
+      "KW": "Kuwait",
+      "BH": "Bahrain",
+      "OM": "Oman",
+      "EG": "Egypt",
+      "JO": "Jordan",
+      "IN": "India",
+      "AU": "Australia",
+      "other": "Other"
+    },
+    "soon": "The waitlist opens soon."
+  },
+  "problem": {
+    "eyebrow": "The business-development bottleneck",
+    "title": "Why agency outreach misses the window.",
+    "lead": "Most firms hear about an open role at the same moment as every competing agency, or risk their reputation on unreviewed automation.",
+    "items": {
+      "timing": {
+        "label": "Timing",
+        "title": "Late to the requisition",
+        "body": "By the time a role reaches the job boards, internal teams have often briefed their preferred suppliers. Two weeks late is too late."
+      },
+      "manual": {
+        "label": "Manual work",
+        "title": "Hours lost to tabs",
+        "body": "Billers cross-check career pages, announcements and LinkedIn by hand, then write every opening message from scratch."
+      },
+      "risk": {
+        "label": "Reputation",
+        "title": "Risky autopilot sequencers",
+        "body": "Generic tools blast unreviewed messages and duplicate pitches from the same firm, and the agency's name pays for it."
+      }
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "From hiring signal to human-approved message in four steps.",
+    "steps": {
+      "define": {
+        "title": "Describe your desk",
+        "body": "Paste your website and set your niche: territories, company size, roles, seniority and clients to exclude."
+      },
+      "detect": {
+        "title": "Detect hiring signals",
+        "body": "ScanAxe watches public job postings and company changes for the signals that matter to your desk."
+      },
+      "score": {
+        "title": "Score and draft",
+        "body": "Each company gets a score with plain reasons and evidence, plus a short draft written for the right decision-maker."
+      },
+      "approve": {
+        "title": "Approve, edit or skip",
+        "body": "A consultant reviews one card at a time and approves. Only approved messages go out.",
+        "tag": "Human gate"
+      }
+    }
+  },
+  "signals": {
+    "eyebrow": "Hiring intent",
+    "title": "Six hiring signals, each with the evidence behind it.",
+    "lead": "Not a 'hiring' flag: ScanAxe explains what changed and why it suggests a company needs outside recruitment help now.",
+    "example": "Example",
+    "items": {
+      "velocity": {
+        "title": "Hiring velocity",
+        "body": "A jump in open roles against the company's own recent baseline.",
+        "example": "7 backend roles in 10 days"
+      },
+      "function": {
+        "title": "New function",
+        "body": "The first hires in a discipline the company didn't have before.",
+        "example": "First \"Head of GRC\" plus two analysts"
+      },
+      "hard": {
+        "title": "Hard-to-fill roles",
+        "body": "Specialist roles that stay open for weeks or keep being reposted.",
+        "example": "Same role reposted after 45+ days"
+      },
+      "expansion": {
+        "title": "Expansion",
+        "body": "First roles in a new country or city, ahead of a local team.",
+        "example": "First roles posted in Riyadh and Doha"
+      },
+      "leadership": {
+        "title": "Leadership hire",
+        "body": "New CTOs, VPs and Heads of Talent who usually build teams soon after.",
+        "example": "New VP Engineering in the last 30 days"
+      },
+      "specialism": {
+        "title": "Specialism match",
+        "body": "Roles that match the niches your desk already places well.",
+        "example": "Embedded Rust roles for a firmware desk"
+      }
+    }
+  },
+  "review": {
+    "eyebrow": "Product preview · fictional data",
+    "title": "One review card. Every fact your consultant needs to decide.",
+    "queue": "Review queue",
+    "fictional": "Fictional example",
+    "awaiting": "Awaiting approval",
+    "company": "Northstar Grid Systems",
+    "companyMeta": "Energy grid software · Munich & London · ~190 staff",
+    "score": "Hiring intent score",
+    "high": "High",
+    "reasons": "Why it scored this way",
+    "reason1": "Principal Rust role open 54 days on the careers page, reposted once",
+    "reason2": "6 distributed-systems roles posted in 11 days",
+    "reason3": "New VP Engineering joined 31 days ago",
+    "evidence": "Signal evidence",
+    "recipient": "Proposed recipient",
+    "recipientName": "VP Engineering (fictional)",
+    "subjectLabel": "Subject",
+    "subject": "Your Principal Rust role (day 54)",
+    "draftLabel": "Draft for review",
+    "draft": "Hi —, I noticed Northstar has grown its Munich and London engineering team quickly and the Principal Rust role has been open since mid-September. Our desk places low-latency Rust engineers in DACH and the UK. Would a short call to compare notes be useful?",
+    "approve": "Approve",
+    "edit": "Edit",
+    "skip": "Skip",
+    "note": "Nothing is sent until someone clicks Approve."
+  },
+  "safety": {
+    "eyebrow": "Safety & governance",
+    "title": "Built for firms that protect their reputation.",
+    "lead": "ScanAxe is not an autopilot. Every layer is designed around consultant oversight and outreach rules.",
+    "items": {
+      "approval": {
+        "title": "Human approval, always",
+        "body": "There is no auto-send switch. Every draft waits in a consultant's queue until it's reviewed and approved.",
+        "tag": "No autopilot"
+      },
+      "dedupe": {
+        "title": "No double sends",
+        "body": "A message is never sent twice, never after a reply, and colleagues on different desks don't pitch the same contact.",
+        "tag": "Workspace-wide locks"
+      },
+      "rules": {
+        "title": "Per-country rules",
+        "body": "Outreach follows the rules of the recipient's country, and when the country is unknown, the strictest rules apply.",
+        "tag": "Strictest by default"
+      }
+    }
+  },
+  "audience": {
+    "eyebrow": "Who it's for",
+    "title": "Made for specialist recruitment desks.",
+    "lead": "Teams where timing and relevance win the brief.",
+    "items": [
+      "Executive search",
+      "Tech & software staffing",
+      "Life sciences recruitment",
+      "Finance & cybersecurity",
+      "Interim & contract desks",
+      "RPO providers",
+      "Multi-territory staffing groups",
+      "IT services firms"
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple per-seat pricing, announced at launch.",
+    "lead": "We're onboarding a small group of design-partner agencies first. They get early access and help shape the product.",
+    "points": [
+      "Early access for design partners",
+      "Your exclusion and client lists respected from day one",
+      "Signal setup tailored to your desks",
+      "Founding terms for the first cohort"
+    ],
+    "cardTitle": "Become a design partner",
+    "cardBody": "Tell us about your desks and territories and we'll be in touch.",
+    "cardCta": "Join the waitlist"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Clear answers on signals, control and compliance.",
+    "items": {
+      "auto": {
+        "q": "Does ScanAxe ever send messages without approval?",
+        "a": "No. Every signal and draft goes to your review queue, and a person has to approve it before anything is sent."
+      },
+      "dedupe": {
+        "q": "How do you stop two of our consultants pitching the same company?",
+        "a": "When a contact is approved for outreach, it's claimed across your workspace for a cooldown period you control, so colleagues don't double-pitch."
+      },
+      "data": {
+        "q": "Where do the hiring signals come from?",
+        "a": "From public job postings on company career pages and job platforms, plus public company information. Every card shows the evidence and when it was found. We don't scrape LinkedIn."
+      },
+      "linkedin": {
+        "q": "Is my LinkedIn account at risk?",
+        "a": "ScanAxe only works with your own accounts, within conservative daily limits, and you can always send manually. We don't use shared, fake or rented accounts."
+      },
+      "compliance": {
+        "q": "How do per-country rules work?",
+        "a": "Each contact is matched to a country profile that decides what's allowed, when, and with what opt-out wording. Unknown country means the strictest profile. Our rules are being reviewed by legal counsel before launch."
+      },
+      "lists": {
+        "q": "Can we upload our client and off-limits lists?",
+        "a": "Yes. Upload clients, off-limits companies and do-not-contact lists so they never reach a consultant's queue."
+      },
+      "language": {
+        "q": "Which languages are supported?",
+        "a": "English and Arabic, including right-to-left layouts. Drafts can be written in the language of the recipient."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Waitlist",
+    "title": "Be first in the hiring manager's inbox, with a message worth reading.",
+    "lead": "Join the waitlist and we'll invite agencies in small groups.",
+    "secondary": "See the review card"
+  },
+  "footer": {
+    "tagline": "Hiring intent and human-approved outreach for recruitment firms.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "rights": "© {year} ScanAxe. Example data on this page is fictional."
   }
 }

@@ -25,3 +25,10 @@ a {
   outline: 2px solid var(--sx-color-brand-action);
   outline-offset: 2px;
 }
+
+/* Arabic letters must stay joined: no letter-spacing, and the Arabic face instead of the mono one. */
+html[dir='rtl'] .font-mono,
+html[dir='rtl'] [class*='tracking-'] {
+  font-family: var(--sx-font-family-arabic);
+  letter-spacing: normal;
+}
