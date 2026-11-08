@@ -6,7 +6,9 @@ on:
 
 jobs:
   commits:
-    runs-on: ubuntu-latest
+    # OPS-11 (ScanAxe DEC-P014): vars.CI_RUNNER picks the runner, ubuntu-latest when unset. This repo is
+    # public, so pull requests from forks always stay on ubuntu-latest.
+    runs-on: ${{ (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && vars.CI_RUNNER || 'ubuntu-latest' }}
     steps:
       - uses: actions/checkout@v4
         with:

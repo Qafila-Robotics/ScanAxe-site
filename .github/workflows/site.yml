@@ -17,7 +17,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # OPS-11 (ScanAxe DEC-P014): vars.CI_RUNNER picks the runner, ubuntu-latest when unset. This repo is
+    # public, so pull requests from forks always stay on ubuntu-latest.
+    runs-on: ${{ (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && vars.CI_RUNNER || 'ubuntu-latest' }}
     env:
       # Project Pages URL until the custom domain is set (OPS-01); then set the repo variable SITE_BASE_URL to '/'.
       NUXT_APP_BASE_URL: ${{ vars.SITE_BASE_URL || '/ScanAxe-site/' }}
@@ -49,7 +51,8 @@ jobs:
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
-    runs-on: ubuntu-latest
+    # OPS-11: same runner switch as the build job (fork pull requests never reach this job).
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
